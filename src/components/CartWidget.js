@@ -4,10 +4,12 @@ import { Badge } from 'react-bootstrap';
 
 const CartWidget = () => {
   return (
-    <div className="cart-widget">
-    <FontAwesomeIcon icon= {faCartShopping} />
-    <div className="qty-display">0</div>
-    <Badge pill bg="success">
+    <div>
+      <div>
+      <FontAwesomeIcon icon= {faCartShopping} />
+      <Badge bg="secondary">0</Badge>
+      </div>
+      <Badge pill bg="success">
        Carrito
       </Badge>
 
