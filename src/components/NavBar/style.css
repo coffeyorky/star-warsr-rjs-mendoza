@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(14, 14, 14);
+}
+.nav{
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icon{
+    color: white;
+}
+ul {
+    list-style: none;
+    color: white;
+  }
+ul li a {
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+  }

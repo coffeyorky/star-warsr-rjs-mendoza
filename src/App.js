@@ -1,16 +1,22 @@
 import './App.css';
-import NavBar from "./components/NavBar";
-import ItemListC from "./components/ItemListContainer"
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./pages/ItemListContainer/ItemListContainer";
+import ItemDetailConteiner from './pages/ItemDetailConteiner/ItemDetailConteiner';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-       <NavBar menu="Wookie Tienda" />
-       <ItemListC />
-      </header>
-    </div>
+     <BrowserRouter>
+     <NavBar />
+     <Routes>
+       <Route path="/" element={<ItemListContainer/>} />
+       <Route path="item/:id" element={<ItemDetailConteiner />} />
+     </Routes>
+     </BrowserRouter>
+
+
   );
 }
 
