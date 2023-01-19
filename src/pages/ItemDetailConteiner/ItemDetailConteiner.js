@@ -1,10 +1,11 @@
+import "./style.css"
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 
 const ItemDetailConteiner = () => {
   const [singleProduct, setSingleProduct] = useState({});
-  const idProduct = "1";
+
   const id = useParams();
   console.log(id);
 

@@ -1,5 +1,6 @@
 import "./style.css";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 const ItemCount = () => {
   const [contador, setContador] =useState(0);
@@ -28,7 +29,7 @@ const ItemCount = () => {
       </div>
 
       <div>
-         <button>Agregar al carrito</button>
+      <Button variant="light">Agregar al carrito</Button>
       </div>
     </div>
   )

@@ -1,31 +1,50 @@
-import "./style.css"
+import "./style.css";
 import CartWidget from "../CartWidget/CartWidget";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  return (   
-    <div className="nav"> 
-    <div>
-      <img alt= "jediOrder" src="./img/jediOrder.png"/>
-    </div> 
-    <div>
+  return (
+    <div className="nav">
+      <div>
+        <img alt="jediOrder" src="./img/jediOrder.png" />
+      </div>
+      <div>
         <ul className="menu">
-          <li><a href="/index">Inicio</a></li>
-          <li><a href="/index">Ropa</a></li>
-          <li><a href="/index">Novelas</a></li>
-          <li><a href="/index">Figuras</a></li>
-          <li><a href="/index">Merch</a></li>
+          <li>
+            <NavLink className={({isActive}) => (isActive ? "active" : "inactive")} to="/">Inicio</NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({isActive}) => (isActive ? "active" : "inactive")}
+              to="/category/men´s clothing"
+            >
+              Hombre
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({isActive}) => (isActive ? "active" : "inactive")}
+              to="/category/women´s clothing"
+            >
+              Mujer
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({isActive}) => (isActive ? "active" : "inactive")}
+              to="/category/electronic"
+            >
+              Joyeria
+            </NavLink>
+          </li>
         </ul>
-    </div>
-    <div>
-      <CartWidget />
-    </div>
-    
+      </div>
+      <div>
+        <CartWidget />
+      </div>
     </div>
 
-    
+  );
+};
 
-  )
-}
-
-export default NavBar
+export default NavBar;
