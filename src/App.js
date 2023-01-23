@@ -16,8 +16,8 @@ function App() {
        <Route path="item/:id" element={<ItemDetailConteiner />} />
      </Routes>
      <div>final de pagina</div>
+     
      </BrowserRouter>
-
 
   );
 }

@@ -4,7 +4,7 @@ const Item = ({producto}) => {
   return (
     <ul className="dirigir">
       <li width="200" className="productos">
-       <img alt={producto.title} src={producto.img} width="200"/>
+       <img src={producto.img} width="200"/>
        <h2>{producto.title}</h2>
        <h3>{producto.category}</h3>
        <h4>{producto.description}</h4>

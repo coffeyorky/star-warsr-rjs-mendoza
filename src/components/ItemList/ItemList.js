@@ -12,5 +12,6 @@ const Itemlist = ({ productos }) => {
     </ul>
   );
 };
+// {"item/"+[producto.id]}
 
 export default Itemlist;

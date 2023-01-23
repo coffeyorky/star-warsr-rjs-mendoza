@@ -19,7 +19,7 @@ body{
 }
 ul {
     list-style: none;
-    color: white;
+    color: white; 
   }
 ul li a {
     margin: 20px;

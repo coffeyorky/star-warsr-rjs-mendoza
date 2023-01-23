@@ -9,35 +9,44 @@ const NavBar = () => {
         <img alt="jediOrder" src="./img/jediOrder.png" />
       </div>
       <div>
-        <ul className="menu">
+         <ul className="menu">
           <li>
             <NavLink className={({isActive}) => (isActive ? "active" : "inactive")} to="/">Inicio</NavLink>
           </li>
           <li>
             <NavLink
               className={({isActive}) => (isActive ? "active" : "inactive")}
-              to="/category/men´s clothing"
+              to="/category/ropa"
             >
-              Hombre
+              Ropa
             </NavLink>
           </li>
           <li>
             <NavLink
               className={({isActive}) => (isActive ? "active" : "inactive")}
-              to="/category/women´s clothing"
+              to="/category/figuras"
             >
-              Mujer
+              Figuras
             </NavLink>
           </li>
           <li>
             <NavLink
               className={({isActive}) => (isActive ? "active" : "inactive")}
-              to="/category/electronic"
+              to="/category/novelas"
             >
-              Joyeria
+              Novelas
             </NavLink>
           </li>
-        </ul>
+          <li>
+            <NavLink
+              className={({isActive}) => (isActive ? "active" : "inactive")}
+              to="/category/merch"
+            >
+             Merch
+            </NavLink>
+          </li>
+
+        </ul> 
       </div>
       <div>
         <CartWidget />
@@ -46,5 +55,16 @@ const NavBar = () => {
 
   );
 };
+
+// className={({isActive}) => (isActive ? "active" : "inactive")}
+
+        // <ul className="menu">
+        //   <li><NavLink to="/">Inicio</NavLink></li>
+        //   <li><NavLink to="/category/ropa">Ropa</NavLink></li>
+        //   <li><NavLink to="/category/figuras">Figuras</NavLink></li>
+        //   <li><NavLink to="/category/novelas">Novelas</NavLink></li>
+        //   <li><NavLink to="/category/merch">Merch</NavLink></li>
+        
+        // </ul>
 
 export default NavBar;
