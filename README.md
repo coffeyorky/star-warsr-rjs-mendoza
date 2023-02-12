@@ -1,9 +1,13 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Wookitienda
+## ciencia ficcion centrada en Star Wars
 ## Available Scripts
 
+- react js boostrap
+- Es una tienda para encontrar diferentes tipos de objetos centrados en star wars
+- El fondo negro es algo que pensaba cambiar a estrellas para que pegue mas con la estetica pero no me dio tiempo
 In the project directory, you can run:
 
 ### `npm start`
