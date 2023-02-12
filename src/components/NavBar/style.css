@@ -17,12 +17,17 @@ body{
 .icon{
     color: white;
 }
+a{
+    margin: 20px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+h4{
+    margin: 20px;
+}
 ul {
     list-style: none;
     color: white; 
   }
-ul li a {
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-  }
+

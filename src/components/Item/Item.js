@@ -2,12 +2,12 @@ import "./Item.css";
 
 const Item = ({producto}) => {
   return (
-    <ul className="dirigir">
+    <ul>
       <li width="200" className="productos">
-       <img src={producto.img} width="200"/>
+       <img alt={producto.title} src={producto.imageid} width="200"/>
        <h2>{producto.title}</h2>
-       <h3>{producto.category}</h3>
-       <h4>{producto.description}</h4>
+       <h3>{producto.categoryid}</h3>
+       <h4>${producto.price}</h4>
     </li>
     </ul>
     );

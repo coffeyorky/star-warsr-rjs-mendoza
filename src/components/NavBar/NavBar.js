@@ -1,12 +1,13 @@
 import "./style.css";
 import CartWidget from "../CartWidget/CartWidget";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="nav">
       <div>
-        <img alt="jediOrder" src="./img/jediOrder.png" />
+      <Link to="/"><img alt="jediOrder" src="./img/jediOrder.png" /></Link>
+        
       </div>
       <div>
          <ul className="menu">
@@ -49,22 +50,15 @@ const NavBar = () => {
         </ul> 
       </div>
       <div>
-        <CartWidget />
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
+
       </div>
     </div>
 
   );
 };
 
-// className={({isActive}) => (isActive ? "active" : "inactive")}
-
-        // <ul className="menu">
-        //   <li><NavLink to="/">Inicio</NavLink></li>
-        //   <li><NavLink to="/category/ropa">Ropa</NavLink></li>
-        //   <li><NavLink to="/category/figuras">Figuras</NavLink></li>
-        //   <li><NavLink to="/category/novelas">Novelas</NavLink></li>
-        //   <li><NavLink to="/category/merch">Merch</NavLink></li>
-        
-        // </ul>
 
 export default NavBar;

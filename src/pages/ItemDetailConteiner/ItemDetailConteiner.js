@@ -2,29 +2,28 @@ import "./style.css"
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import { getFirestore, doc, getDoc} from "firebase/firestore";
 
 const ItemDetailConteiner = () => {
    const [singleProduct, setSingleProduct] = useState({});
    const { id } = useParams();
-   console.log(id);
 
 
+const getProduct = () => {
+  const dataSw = getFirestore();
+  const querySnapshot = doc(dataSw, "items", id);
 
- const getProduct = fetch( "https://63ccc03fea8551541524536e.mockapi.io/api/st3/swars/"+[id]+"" , {
-   method: "GET",
- });
+  getDoc(querySnapshot)
+  .then((response) => {
+    setSingleProduct({ id: response.id, ...response.data() });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
 
      useEffect(() => {
-       getProduct
-       .then((resp) => {
-        return resp.json();
-       })
-         .then((data) => {
-           setSingleProduct(data);
-         })
-         .catch((error) => {
-           console.log(error);
-         });
+       getProduct();
      }, []);
 
     
